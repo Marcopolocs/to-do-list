@@ -1,0 +1,10 @@
+.list-items {
+  padding: 2rem;
+  background-color: lightcoral;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px 1px rgb(218, 209, 209);
+}
+
+.form-group {
+  padding: 10px;
+}

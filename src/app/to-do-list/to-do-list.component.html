@@ -1,0 +1,30 @@
+<section>
+  <div class="row">
+    <div class="col-xs-10 formStyle">
+      <app-new-list-item></app-new-list-item>
+      <ul
+        class="listItemStyle"
+        [ngStyle]="{
+          backgroundColor: completedItem ? 'green' : 'lightgrey'
+        }"
+      >
+        <a
+          class="list-group-item"
+          style="cursor: pointer"
+          *ngFor="let listItem of listItems; index as i"
+        >
+          <h4>{{ i + 1 }} {{ listItem.name }}</h4>
+          <p>
+            {{ listItem.description }}
+          </p>
+          <button style="cursor: pointer" (click)="onCompleted(i, listItem)">
+            Completed
+          </button>
+          <button style="cursor: pointer" (click)="onDeleteItem(i)">
+            Delete activity
+          </button>
+        </a>
+      </ul>
+    </div>
+  </div>
+</section>

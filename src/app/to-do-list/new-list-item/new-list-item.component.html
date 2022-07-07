@@ -1,0 +1,32 @@
+<div class="row list-items">
+  <div class="col-xs-12">
+    <form [formGroup]="newListForm" (ngSubmit)="onAddItem()">
+      <div class="row">
+        <label for="toDoName">Task name</label>
+        <div class="col-sm-5 form-group">
+          <input
+            type="text"
+            id="name"
+            class="form-control"
+            formControlName="toDoName"
+          />
+        </div>
+        <label for="toDoDescription">Description</label>
+        <div class="col-sm-2 form-group">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="toDoDescription"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <button class="btn btn-success" type="submit" style="cursor: pointer">
+            Add new activity
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
